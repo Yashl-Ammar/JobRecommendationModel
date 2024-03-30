@@ -13,5 +13,8 @@ install:
 test:
 	python -m pytest test.py
 
+test2:
+	python -m flake8
+
 build:
 	docker build -t flask-app .
