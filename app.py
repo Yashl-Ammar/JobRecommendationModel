@@ -35,7 +35,7 @@ def content_recommendation_v2(title):
     similar_df = similar_df[similar_df['index'] != index].sort_values(by='sim', ascending=False)
     return similar_df[['job_description', 'sim']].head(60)
 
-
+# this is the recommendation route
 @app.route('/recommendation', methods=['POST'])
 def recommendation():
     data = request.get_json()
